@@ -35,5 +35,9 @@ input::placeholder,
 }
 
 .v-application {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
+}
+
+.v-input {
+  flex: 1 !important;
 }

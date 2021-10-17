@@ -19,7 +19,14 @@
     <tr>
         <td>Link Website</td>
         <td>:</td>
-        <td><a href="ww.google.com" target="_blank">Link</a></td>
+        <td>
+            <a 
+                href="https://angaihimitsu.github.io/Tugas-Project-3-Pendataan-Bansos-Frontend-JS-Project/"
+                target="_blank"
+            >
+                Link
+            </a>
+        </td>
     </tr>
 </table>
 

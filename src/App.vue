@@ -1,28 +1,33 @@
+<style>
+  @import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,900';
+  @import './assets/css/styles.css';
+</style>
+
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <Dialog />
+
+    <v-main class="grey lighten-2">
+        <v-slide-x-transition leave-absolute>
+          <router-view />
+        </v-slide-x-transition>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Dialog : () => import(/* webpackChunkName: "about" */ './components/Dialog.vue')
+  },
+  data: () => ({
+    //
+  }),
+  watch:{
+    $route(to){
+      document.title = to.meta.title
+    },
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

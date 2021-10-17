@@ -19,6 +19,7 @@
       <v-form
         ref="form"
         v-model="valid"
+        @submit.prevent="submit"
         lazy-validation
       >
         <v-text-field
@@ -341,7 +342,7 @@
             elevation="3"
             color="success"
             class="mr-4 rounded-pill px-16 py-6 px-md-14"
-            @click="validate"
+            type="submit"
           >
             Simpan
           </v-btn>
@@ -436,7 +437,7 @@
         return Math.random() * (max - min) + min
       },
 
-      async validate() {
+      async submit() {
         if(this.$refs.form.validate()){
             let time = Math.floor(this.randomNumber(1400,1600))
             console.log({

@@ -17,9 +17,9 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:angaihimitsu/angaihimitsu.github.io.git main
+# git push -f https://github.com/angaihimitsu/Tugas-Project-3-Pendataan-Bansos-Frontend-JS-Project.git main
 
 # if you are deploying to https://angaihimitsu.github.io/<REPO>
-git push -f git@github.com:angaihimitsu/Tugas-Project-3-Pendataan-Bansos-Frontend-JS-Project.git main:gh-pages
+git push -f https://github.com/angaihimitsu/Tugas-Project-3-Pendataan-Bansos-Frontend-JS-Project.git master:gh-pages
 
 cd -

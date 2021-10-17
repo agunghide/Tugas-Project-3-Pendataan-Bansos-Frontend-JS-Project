@@ -39,17 +39,13 @@
 
 <script>
   export default {
-    data: () => ({
-      
-    }),
     beforeCreate(){
       if(!this.$route.params.savedForm){
-        console.log("masuk")
-        this.$router.push("/");
+        document.title = this.$route.meta.title
+        this.$router.push("/")
+      }else{
+        document.title = "Berhasil disimpan"
       }
-
-    },   
-    mounted(){
-    }
+    },
   }
 </script>

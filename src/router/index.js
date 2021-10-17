@@ -8,7 +8,7 @@ const routes = [
     path: '/',
     name: 'Home',
     meta: {
-      title: "Beranda",
+      title: "Formulir pendataan bansos",
     },
     component: () => import('../views/Form.vue')
   },
@@ -16,7 +16,7 @@ const routes = [
     path: '/info',
     name: 'Info',
     meta: {
-      title: "Berhasil Disimpan",
+      title: "Info",
     },
     props: true,
     component: () => import('../views/Info.vue')

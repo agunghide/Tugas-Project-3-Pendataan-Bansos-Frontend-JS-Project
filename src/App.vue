@@ -21,13 +21,5 @@ export default {
   components: {
     Dialog : () => import(/* webpackChunkName: "about" */ './components/Dialog.vue')
   },
-  data: () => ({
-    //
-  }),
-  watch:{
-    $route(to){
-      document.title = to.meta.title
-    },
-  }
 };
 </script>

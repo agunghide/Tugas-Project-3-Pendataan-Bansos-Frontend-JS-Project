@@ -34,8 +34,10 @@
 
         <v-text-field
           v-model="nik"
+          name="nik"
           class="mb-4"
           :counter="16"
+          @keypress="cekNumber"
           :rules="[v => !!v || 'NIK wajib diisi', rules.nik]"
           label="NIK"
           color="accent"
@@ -47,9 +49,11 @@
 
         <v-text-field
           v-model="noKK"
+          name="kk"
           class="mb-4"
-          :rules="[v => !!v || 'Nomor Kartu Keluarga wajib diisi', rules.kk]"
           :counter="16"
+          @keypress="cekNumber"
+          :rules="[v => !!v || 'Nomor Kartu Keluarga wajib diisi', rules.kk]"
           label="Nomor Kartu Keluarga"
           color="accent"
           type="number"
@@ -225,6 +229,7 @@
         <div class="row mb-4 ">
           <v-text-field
             v-model="RT"
+            @keypress="cekNumber"
             class="col-6"
             :rules="[v => !!v || 'RT wajib Diisi']"
             label="RT"
@@ -236,6 +241,7 @@
           ></v-text-field>
           <v-text-field
             v-model="RW"
+            @keypress="cekNumber"
             class="col-6"
             :rules="[v => !!v || 'RW wajib Diisi']"
             label="RW"
@@ -250,6 +256,7 @@
         <div class="row mb-4 ">
           <v-text-field
             v-model="PengSebelumPandemi"
+            @keypress="cekNumber"
             class="col-12 col-sm-6 mb-4 mb-sm-0"
             :rules="[ v => !!v || 'Penghasilan Sebelum Pandemi wajib Diisi']"
             counter
@@ -264,6 +271,7 @@
 
           <v-text-field
             v-model="PengSetelahPandemi"
+            @keypress="cekNumber"
             class="col-12 col-sm-6"
             :rules="[ v => !!v || 'Penghasilan Setelah Pandemi wajib Diisi']"
             counter
@@ -428,9 +436,7 @@
         return Math.random() * (max - min) + min
       },
 
-
-
-      async validate () {
+      async validate() {
         if(this.$refs.form.validate()){
             let time = Math.floor(this.randomNumber(1400,1600))
             console.log({
@@ -465,6 +471,7 @@
           this.fotoKTPPreview = "https://via.placeholder.com/150x150?text=KK"
         }
       },
+
       cekKK(){
         if(this.statusKK.validate()){
           const reader = new FileReader()
@@ -476,7 +483,23 @@
         }else{
           this.fotoKKPreview = "https://via.placeholder.com/150x150?text=KK"
         }
+      },
+
+      cekNumber(event){
+        if (event.which != 8 && event.which != 0 && event.which < 48 || event.which > 57){
+            event.preventDefault()
+        }
+
+        if(event.target.name == "nik" || event.target.name == "kk"){
+          if(event.target.value.length >= 16){
+              event.preventDefault()
+          }
+        }
+
       }
     },
+    beforeMount(){
+      document.title = this.$route.meta.title
+    }
   }
 </script>

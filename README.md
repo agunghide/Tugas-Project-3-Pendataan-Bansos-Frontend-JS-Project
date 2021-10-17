@@ -14,7 +14,14 @@
     <tr>
         <td>Video Demo</td>
         <td>:</td>
-        <td><a href="ww.google.com" target="_blank">Link</a></td>
+        <td>
+            <a 
+                href="ww.google.com" 
+                target="_blank" 
+                rel="noopener">
+                Link
+            </a>
+        </td>
     </tr>
     <tr>
         <td>Link Website</td>
@@ -23,6 +30,7 @@
             <a 
                 href="https://angaihimitsu.github.io/Tugas-Project-3-Pendataan-Bansos-Frontend-JS-Project/"
                 target="_blank"
+                rel="noopener"
             >
                 Link
             </a>

@@ -1,18 +1,27 @@
-<style>
-td, th {
-   border: none!important;
-   margin:0;
-}
-</style>
-
 # Tugas Project 3 Pendataan Bansos (Frontend JS Project)
 
-|              |     |                       |
-| ------------ | --- | --------------------- |
-| Nama         | :   | Agung Hidayat         |
-| Kelas        | :   | VueJS                 |
-| Video Demo   | :   | [Link](ww.google.com) |
-| Link Website | :   | [Link](ww.google.com) |
+<table style="border:none;">
+    <tr>
+        <td>Nama</td>
+        <td>:</td>
+        <td>Agung Hidayat</td>
+    </tr>
+    <tr>
+        <td>Kelas</td>
+        <td>:</td>
+        <td>VueJS</td>
+    </tr>
+    <tr>
+        <td>Video Demo</td>
+        <td>:</td>
+        <td><a href="ww.google.com" target="_blank">Link</a></td>
+    </tr>
+    <tr>
+        <td>Link Website</td>
+        <td>:</td>
+        <td><a href="ww.google.com" target="_blank">Link</a></td>
+    </tr>
+</table>
 
 ## Tentang Layout/Desain
 

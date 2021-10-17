@@ -291,8 +291,8 @@
           component: function() {
             return Promise.all([
               n.e("chunk-ad231e24"),
-              n.e("chunk-4671f6ee"),
               n.e("chunk-2d0b257b"),
+              n.e("chunk-4671f6ee"),
             ]).then(n.bind(null, "2469"));
           },
         },
